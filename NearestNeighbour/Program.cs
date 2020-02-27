@@ -25,8 +25,8 @@ namespace NearestNeighbour
             {
                 var records = csv.GetRecords<Point>().ToList();
 
-            Console.WriteLine("Carmen do the magic - safe");
-            Console.ReadKey();
+                Console.WriteLine("Carmen do the magic - safe");
+                Console.ReadKey();
             }
 
         }
