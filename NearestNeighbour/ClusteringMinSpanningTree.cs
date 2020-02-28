@@ -21,29 +21,29 @@ namespace NearestNeighbour
         public double Y { get; set; }
 
     }
-    public class Program
+    public class ClusteringMinSpanningTree
     {
-        static void Main(string[] args)
-        {
-            using (var reader = new StreamReader("Origin.csv"))
-            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
-            {
-                var records = csv.GetRecords<Point>();
+        //static void Main(string[] args)
+        //{
+        //    using (var reader = new StreamReader(@"..\..\..\points.csv"))
+        //    using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+        //    {
+        //        var records = csv.GetRecords<Point>();
                 
-                Console.WriteLine("Carmen do the magic - safe");
+        //        Console.WriteLine("Carmen do the magic - safe");
                 
-                var graph = BuildGraph(records);
+        //        var graph = BuildGraph(records);
 
-                //K is the number of clusters you want in output
-                var HMSTC = new HMinSpanningTreeClustering<double>(graph, k: 5, new HashSet<IGraphNode>());
+        //        //K is the number of clusters you want in output
+        //        var HMSTC = new HMinSpanningTreeClustering<double>(graph, k: 20, new HashSet<IGraphNode>());
 
-                var clusters= ComputeClustersConnectedComponents(HMSTC);
+        //        var clusters= ComputeClustersConnectedComponents(HMSTC);
 
 
-                Console.ReadKey();
-            }
+        //        Console.ReadKey();
+        //    }
 
-        }
+        //}
 
 
         public static IGraph<IGraphNode> BuildGraph(IEnumerable<Point> origins)

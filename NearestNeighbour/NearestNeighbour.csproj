@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -9,6 +9,7 @@
     <PackageReference Include="Basemap.Algorithms.Contracts" Version="1.0.1-alpha2" />
     <PackageReference Include="Basemap.Algorithms.Engine" Version="1.0.1-alpha4" />
     <PackageReference Include="CsvHelper" Version="15.0.0" />
+    <PackageReference Include="Google.OrTools" Version="7.5.7466" />
   </ItemGroup>
 
   <ItemGroup>
